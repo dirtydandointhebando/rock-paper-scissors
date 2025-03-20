@@ -13,4 +13,5 @@ function getComputerChoice() {
     else if (number === 3) return "Scissors"; 
 }
 
-console.log(getComputerChoice());
+let computerChoice = (getComputerChoice());
+console.log(computerChoice);
