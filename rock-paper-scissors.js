@@ -22,12 +22,6 @@ console.log(computerChoice);
 const userChoice = prompt("Ready to play? Rock... paper... scissors!")
 console.log(userChoice);
 
-/*
-function winner(userChoice) {
-    if (userChoice === "Rock" && computerChoice === "Scissors") {
-        alert("Rock beats scissors! You win!");
-    }
-}
+let humanScore = 0;
+let computerScore = 0;
 
-winner();
-*/
