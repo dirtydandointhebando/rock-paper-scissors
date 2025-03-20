@@ -7,8 +7,10 @@
 
 // use the Math.random function to assign a value from 1-3 and then assign rock, paper, or scissors based on that value
 function getComputerChoice() {
-    choice = Math.floor(Math.random() * 3 + 1);
-    console.log(choice);
+    const number = Math.floor(Math.random() * 3 + 1);
+    if (number === 1) return "Rock";
+    else if (number === 2) return "Paper";
+    else if (number === 3) return "Scissors"; 
 }
 
-getComputerChoice();
+console.log(getComputerChoice());
