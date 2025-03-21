@@ -25,7 +25,9 @@ console.log(humanChoice);
 let humanScore = 0;
 let computerScore = 0;
 
+/*
 function playRound(humanChoice, computerChoice) {
+    console.log(`DEBUG: Comparing humanChoice="${humanChoice.toLowerCase()}" with computerChoice="${computerChoice}"`);
     if (humanChoice.toLowerCase() === "rock" && computerChoice === "rock") {
         console.log("Both choose rock! It's a draw!");
         console.log(`Computer score is still ${computerScore}. Human score is still ${humanScore}.`);
@@ -59,6 +61,40 @@ function playRound(humanChoice, computerChoice) {
     } else if (humanChoice.toLowerCase() === "scissors" && computerChoice === "scissors") {
         console.log("Both choose scissors! It's a draw!");
         console.log(`Computer score is still ${computerScore}. Human score is still ${humanScore}.`);
+    }
+}
+*/
+// console.log("Normalized input:", humanChoice.toLowerCase());
+
+function playRound(humanChoice, computerChoice) {
+    humanChoice.toLowerCase();
+    computerChoice.toLowerCase();
+    if (humanChoice === computerChoice) {
+        console.log(`It's a draw! The score is still ${humanScore} for the human and ${computerScore} for the computer!`);
+    } else if (humanChoice === "rock" && computerChoice === "scissors") {
+        console.log("Rock beats scissors! Meatbag wins!");
+        humanScore++;
+        console.log(`Human score is now ${humanScore}. The computer's score is ${computerScore}.`);
+    } else if (humanChoice === "rock" && computerChoice === "paper") {
+        console.log("Paper beats rock. The machine wins!");
+        computerScore++
+        console.log(`Human score is now ${humanScore}. The computer's score is ${computerScore}.`);
+    } else if (humanChoice === "paper" && computerChoice === "rock") {
+        console.log("Paper beats rock! Meatbag wins!");
+        humanScore++;
+        console.log(`Human score is now ${humanScore}. The computer's score is ${computerScore}.`);
+    } else if (humanChoice === "paper" && computerChoice === "scissors") {
+        console.log("Scissors beats paper! Machine wins!");
+        computerScore++;
+        console.log(`Human score is now ${humanScore}. The computer's score is ${computerScore}.`);
+    } else if (humanChoice === "scissors" && computerChoice === "paper") {
+        console.log("Scissors beats paper! Meatbag wins! What a play!");
+        humanScore++;
+        console.log(`Human score is now ${humanScore}. The computer's score is ${computerScore}.`);
+    } else if (humanChoice === "scissors" && computerChoice === "rock") {
+        console.log("Rock beats scissors! Meatbag loses.");
+        computerScore++;
+        console.log(`Human score is now ${humanScore}. The computer's score is ${computerScore}.`);
     }
 }
 
