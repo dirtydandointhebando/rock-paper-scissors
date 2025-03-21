@@ -14,14 +14,32 @@ function getComputerChoice() {
 }
 
 // Assign getComputerChoice() value to variable computerChoice
-let computerChoice = (getComputerChoice());
+const computerChoice = (getComputerChoice());
 console.log(computerChoice);
 
 // Use a prompt to get the user's choice 
 
-const userChoice = prompt("Ready to play? Rock... paper... scissors!")
-console.log(userChoice);
+const humanChoice = prompt("Ready to play? Rock... paper... scissors!");
+console.log(humanChoice);
 
 let humanScore = 0;
 let computerScore = 0;
 
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice.toLowerCase() === "rock" && computerChoice === "rock") {
+        console.log("Both choose rock! It's a draw!");
+        console.log(`Computer score is still ${computerScore}. Human score is still ${humanScore}.`);
+    } else if (humanChoice.toLowerCase() === "rock" && computerChoice === "Paper") {
+        console.log("Paper beats rock! Computer wins!");
+        computerScore++
+        console.log(`Computer score is now ${computerScore}. Human score is ${humanScore}.`);
+    } else if (humanChoice.toLowerCase() === "rock" && computerChoice === "Scissors") {
+        console.log("Rock beats scissors! Meatbag wins!");
+        humanScore++
+        console.log(`Computer score is now ${computerScore}. Human score is ${humanScore}.`);
+    }
+}
+
+
+
+playRound(humanChoice, computerChoice);
