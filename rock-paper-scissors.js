@@ -14,8 +14,6 @@ function getComputerChoice() {
 }
 
 // Assign getComputerChoice() value to variable computerChoice
-const computerChoice = (getComputerChoice());
-console.log(computerChoice);
 
 // Use a prompt to get the user's choice 
 
@@ -97,11 +95,13 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-playRound(humanChoice, computerChoice);
-playRound(humanChoice, computerChoice);
-playRound(humanChoice, computerChoice);
-playRound(humanChoice, computerChoice);
-playRound(humanChoice, computerChoice);
+function playGame() {
+    let computerChoice = getComputerChoice();
+    let humanChoice = getHumanChoice();
+    for (let i = 0; i < 5; i++) {
+        playRound();
+    }
+}
 
 
 /*
