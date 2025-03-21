@@ -100,10 +100,9 @@ function playRound(humanChoice, computerChoice) {
 
 playRound(humanChoice, computerChoice);
 
-/* while (computerScore <= 5 || humanScore <= 5) {
+while (computerScore < 5 || humanScore < 5) {
     const humanChoice = prompt("Ready to play? Rock... paper... scissors!");
     console.log(humanChoice);
     console.log(computerChoice);
     playRound(humanChoice, computerChoice);
 }
-    */ 
