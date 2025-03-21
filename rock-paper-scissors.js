@@ -67,8 +67,8 @@ function playRound(humanChoice, computerChoice) {
 // console.log("Normalized input:", humanChoice.toLowerCase());
 
 function playRound(humanChoice, computerChoice) {
-    humanChoice.toLowerCase();
-    computerChoice.toLowerCase();
+    humanChoice = humanChoice.toLowerCase();
+    computerChoice = computerChoice.toLowerCase();
     if (humanChoice === computerChoice) {
         console.log(`It's a draw! The score is still ${humanScore} for the human and ${computerScore} for the computer!`);
     } else if (humanChoice === "rock" && computerChoice === "scissors") {
