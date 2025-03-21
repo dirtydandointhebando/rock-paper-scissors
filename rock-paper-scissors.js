@@ -57,14 +57,17 @@ function playRound(humanChoice, computerChoice) {
         humanScore++
         console.log(`Computer score is now ${computerScore}. Human score is ${humanScore}.`);
     } else if (humanChoice.toLowerCase() === "scissors" && computerChoice === "scissors") {
-        console.log("Both choose paper! It's a draw!");
+        console.log("Both choose scissors! It's a draw!");
         console.log(`Computer score is still ${computerScore}. Human score is still ${humanScore}.`);
     }
 }
 
-while (computerScore <= 5 || humanScore <= 5) {
+playRound(humanChoice, computerChoice);
+
+/* while (computerScore <= 5 || humanScore <= 5) {
     const humanChoice = prompt("Ready to play? Rock... paper... scissors!");
     console.log(humanChoice);
     console.log(computerChoice);
     playRound(humanChoice, computerChoice);
 }
+    */ 
