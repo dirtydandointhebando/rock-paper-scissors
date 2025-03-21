@@ -37,9 +37,34 @@ function playRound(humanChoice, computerChoice) {
         console.log("Rock beats scissors! Meatbag wins!");
         humanScore++
         console.log(`Computer score is now ${computerScore}. Human score is ${humanScore}.`);
+    } else if (humanChoice.toLowerCase() === "paper" && computerChoice === "rock") {
+        console.log("Paper beats rock! Meatbag wins!");
+        humanScore++
+        console.log(`Computer score is now ${computerScore}. Human score is ${humanScore}.`);
+    } else if (humanChoice.toLowerCase() === "paper" && computerChoice === "paper") {
+        console.log("Both choose paper! It's a draw!");
+        console.log(`Computer score is still ${computerScore}. Human score is still ${humanScore}.`);
+    } else if (humanChoice.toLowerCase() === "paper" && computerChoice === "scissors") {
+        console.log("Scissors beats paper! Computer wins!");
+        computerScore++
+        console.log(`Computer score is now ${computerScore}. Human score is ${humanScore}.`);
+    } else if (humanChoice.toLowerCase() === "scissors" && computerChoice === "rock") {
+        console.log("Rock beats scissors! Computer wins!");
+        computerScore++
+        console.log(`Computer score is now ${computerScore}. Human score is ${humanScore}.`);
+    } else if (humanChoice.toLowerCase() === "scissors" && computerChoice === "paper") {
+        console.log("Scissors beats paper! Meatbag wins!");
+        humanScore++
+        console.log(`Computer score is now ${computerScore}. Human score is ${humanScore}.`);
+    } else if (humanChoice.toLowerCase() === "scissors" && computerChoice === "scissors") {
+        console.log("Both choose paper! It's a draw!");
+        console.log(`Computer score is still ${computerScore}. Human score is still ${humanScore}.`);
     }
 }
 
-
-
-playRound(humanChoice, computerChoice);
+while (computerScore <= 5 || humanScore <= 5) {
+    const humanChoice = prompt("Ready to play? Rock... paper... scissors!");
+    console.log(humanChoice);
+    console.log(computerChoice);
+    playRound(humanChoice, computerChoice);
+}
