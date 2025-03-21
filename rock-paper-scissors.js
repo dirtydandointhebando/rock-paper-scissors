@@ -8,9 +8,9 @@
 // Use the Math.random function to assign a value from 1-3 and then assign rock, paper, or scissors based on that value
 function getComputerChoice() {
     const number = Math.floor(Math.random() * 3 + 1);
-    if (number === 1) return "Rock";
-    else if (number === 2) return "Paper";
-    else if (number === 3) return "Scissors"; 
+    if (number === 1) return "rock";
+    else if (number === 2) return "paper";
+    else if (number === 3) return "scissors"; 
 }
 
 // Assign getComputerChoice() value to variable computerChoice
@@ -68,7 +68,6 @@ function playRound(humanChoice, computerChoice) {
 
 function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
-    computerChoice = computerChoice.toLowerCase();
     if (humanChoice === computerChoice) {
         console.log(`It's a draw! The score is still ${humanScore} for the human and ${computerScore} for the computer!`);
     } else if (humanChoice === "rock" && computerChoice === "scissors") {
@@ -99,10 +98,17 @@ function playRound(humanChoice, computerChoice) {
 }
 
 playRound(humanChoice, computerChoice);
+playRound(humanChoice, computerChoice);
+playRound(humanChoice, computerChoice);
+playRound(humanChoice, computerChoice);
+playRound(humanChoice, computerChoice);
 
+
+/*
 while (computerScore < 5 && humanScore < 5) {
     const humanChoice = prompt("Ready to play? Rock... paper... scissors!");
     console.log(humanChoice);
     console.log(computerChoice);
     playRound(humanChoice, computerChoice);
 }
+*/
