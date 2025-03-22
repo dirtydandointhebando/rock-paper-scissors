@@ -38,16 +38,14 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-/*
-function playGame() {
-    let humanChoice = prompt("Ready to play? Rock... paper... scissors!");
-    let computerChoice = getComputerChoice();
-    console.log(`Meatbag picks ${humanChoice.toLowerCase()} and The Machine picks ${computerChoice}.`)
-    for (let i = 0; i < 5; i++) {
-        playRound(humanChoice, computerChoice);
+function getWinner() {
+    if (humanScore > computerScore) {
+        console.log(`That's it, folks! Meatbag wins ${humanScore} to ${computerScore}!`);
+    } else if (humanScore < computerScore) {
+        console.log(`That's it, folks! Computer wins ${computerScore} to ${humanScore}!`);
     }
 }
-*/
+
 function playGame() {
     for (let i = 0; i < 5; i++) {
         let humanChoice = prompt("Ready to play? Rock... paper... scissors!");
@@ -55,14 +53,7 @@ function playGame() {
         console.log(`Meatbag picks ${humanChoice.toLowerCase()} and The Machine picks ${computerChoice}.`);
         playRound(humanChoice, computerChoice);
     }
-    function getWinner() {
-        if (humanScore > computerScore) {
-            console.log(`Meatbag wins ${humanScore} to ${computerScore}!`);
-        } else if (humanScore < computerScore) {
-            console.log(`Computer wins ${computerScore} to ${humanScore}!`);
-        }
-    }
-    getWinner();
 }
 
 playGame();
+
