@@ -53,7 +53,7 @@ function playGame() {
         console.log(`Meatbag picks ${humanChoice.toLowerCase()} and The Machine picks ${computerChoice}.`);
         playRound(humanChoice, computerChoice);
     } 
+    declareWinner();
 }
 
 playGame();
-console.log(declareWinner());
