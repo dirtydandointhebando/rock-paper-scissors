@@ -12,7 +12,16 @@ function getComputerChoice() {
     else if (number === 3) return "scissors"; 
 }
 
+const computerChoice = getComputerChoice;
+
 console.log(getComputerChoice());
+console.log(computerChoice);
 
 let humanScore = 0;
 let computerScore = 0;
+
+const playRound = () => {
+    if (humanChoice === computerChoice) {
+        console.log(`It's a draw! The score is still ${humanScore} for the human and ${computerScore} for the computer!`);
+    }
+}
