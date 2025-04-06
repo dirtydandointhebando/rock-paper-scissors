@@ -21,7 +21,7 @@ let computerScore = 0;
 console.log(getComputerChoice());
 console.log(computerChoice);
 
-const playRound = () => {
+const playRound = (player1, player2) => {
     humanChoice.toLowerCase();
     if (humanChoice === computerChoice) {
         console.log(`It's a draw! The score is still ${humanScore} for the human and ${computerScore} for the computer!`);
@@ -57,3 +57,23 @@ const playRound = () => {
         console.log(`Human score is now ${humanScore}. The computer's score is ${computerScore}.`);
     }
 };
+
+function declareWinner() {
+    if (humanScore > computerScore) {
+        console.log(`That's it, folks! Meatbag wins ${humanScore} to ${computerScore}!`);
+    } else if (humanScore < computerScore) {
+        console.log(`That's it, folks! Computer wins ${computerScore} to ${humanScore}!`);
+    }
+};
+
+function playGame() {
+    for (let i = 0; i < 5; i++) {
+        let humanChoice = prompt("Ready to play? Rock... paper... scissors!");
+        let computerChoice = getComputerChoice();
+        console.log(`Meatbag picks ${humanChoice.toLowerCase()} and The Machine picks ${computerChoice}.`);
+        playRound(humanChoice, computerChoice);
+    } 
+    declareWinner();
+};
+
+playGame();
