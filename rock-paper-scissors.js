@@ -12,7 +12,7 @@ function getComputerChoice() {
     else if (number === 3) return "scissors"; 
 }
 
-const computerChoice = getComputerChoice;
+const computerChoice = getComputerChoice();
 
 console.log(getComputerChoice());
 console.log(computerChoice);
