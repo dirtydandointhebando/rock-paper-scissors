@@ -13,15 +13,22 @@ function getComputerChoice() {
 }
 
 const computerChoice = getComputerChoice();
-
-console.log(getComputerChoice());
-console.log(computerChoice);
+const humanChoice = "";
 
 let humanScore = 0;
 let computerScore = 0;
 
+console.log(getComputerChoice());
+console.log(computerChoice);
+
 const playRound = () => {
+    humanChoice.toLowerCase();
     if (humanChoice === computerChoice) {
         console.log(`It's a draw! The score is still ${humanScore} for the human and ${computerScore} for the computer!`);
     }
-}
+    else if (humanChoice === "rock" && computerChoice === "scissors") {
+        console.log("Rock beats scissors! Meatbag wins!");
+        humanScore++;
+        console.log(`Human score is now ${humanScore}. The computer's score is ${computerScore}.`);
+    }
+};
