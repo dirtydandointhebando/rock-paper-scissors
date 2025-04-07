@@ -9,6 +9,10 @@ let humanScore = 0;
 let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
+    if (humanChoice === null) {
+        console.log("Game canceled. No choice made.");
+        return; // Exit early
+    };
     if (humanChoice === computerChoice) {
         console.log(`It's a draw! The score is still ${humanScore} for the human and ${computerScore} for the computer!`);
     } else if (humanChoice === "rock" && computerChoice === "scissors") {
@@ -41,7 +45,7 @@ function playRound(humanChoice, computerChoice) {
 function declareWinner() {
     if (humanScore > computerScore) {
         console.log(`That's it, folks! Meatbag wins ${humanScore} to ${computerScore}!`);
-    } else if (humanScore < computerScore) {
+    } else {
         console.log(`That's it, folks! Computer wins ${computerScore} to ${humanScore}!`);
     }
 }
