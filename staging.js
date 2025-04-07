@@ -42,6 +42,7 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+/*
 function declareWinner() {
     if (humanScore > computerScore) {
         console.log(`That's it, folks! Meatbag wins ${humanScore} to ${computerScore}!`);
@@ -49,6 +50,7 @@ function declareWinner() {
         console.log(`That's it, folks! Computer wins ${computerScore} to ${humanScore}!`);
     }
 }
+*/
 
 function playGame() {
     for (let i = 0; i < 5; i++) {
@@ -57,7 +59,6 @@ function playGame() {
         console.log(`Meatbag picks ${humanChoice.toLowerCase()} and The Machine picks ${computerChoice}.`);
         playRound(humanChoice, computerChoice);
     } 
-    declareWinner();
 }
 
 playGame();
