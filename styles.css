@@ -13,3 +13,16 @@ p {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+#rps-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    height: 40px;
+    width: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
