@@ -42,6 +42,8 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+
+
 /*
 function declareWinner() {
     if (humanScore > computerScore) {
@@ -51,7 +53,7 @@ function declareWinner() {
     }
 }
 */
-
+/*
 function playGame() {
     for (let i = 0; i < 5; i++) {
         let humanChoice = prompt("Ready to play? Rock... paper... scissors!");
@@ -62,3 +64,4 @@ function playGame() {
 }
 
 playGame();
+*/
