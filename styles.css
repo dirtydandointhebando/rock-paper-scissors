@@ -34,6 +34,10 @@ button {
     border-radius: 20px;
 }
 
+button:hover {
+    box-shadow: 0px 10px 25px rgba(37, 139, 229, 0.35);
+  }
+
 #rps-picker {
     background-color: white;
     padding: 25px 40px;
