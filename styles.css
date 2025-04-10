@@ -48,12 +48,13 @@ button:active {
     background-color: rgb(46, 140, 255, 0.1);
 }
 
-#rps-picker {
+#container {
     background-color: white;
     padding: 25px 40px;
     border-radius: 30px;
     border-right: solid 4px #9BBBF2;
     border-bottom: solid 4px #9BBBF2;
+
 }
 
 #output {
