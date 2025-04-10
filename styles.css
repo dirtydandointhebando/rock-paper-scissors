@@ -55,3 +55,7 @@ button:active {
     border-right: solid 4px #9BBBF2;
     border-bottom: solid 4px #9BBBF2;
 }
+
+#output {
+    background-color: #e9e8e8;
+}
