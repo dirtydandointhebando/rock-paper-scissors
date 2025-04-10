@@ -57,6 +57,24 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+const rockButton = document.querySelector("#rockButton");
+rockButton.addEventListener("click", () => {
+  let humanChoice = "rock";
+  playRound(humanChoice, computerChoice);
+});
+
+const paperButton = document.querySelector("#paperButton");
+paperButton.addEventListener("click", () => {
+  let humanChoice = "paper";
+  playRound(humanChoice, computerChoice);
+});
+
+const scissorsButton = document.querySelector("#scissorsButton");
+scissorsButton.addEventListener("click", () => {
+  let humanChoice = "scissors";
+  playRound(humanChoice, computerChoice);
+});
+
 // Note to self: instead of manually calling the function, have the button click call the function and assign humanChoice
 /*
 function playGame() {
