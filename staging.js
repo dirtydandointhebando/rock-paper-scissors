@@ -57,8 +57,17 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-
-
+// Note to self: instead of manually calling the function, have the button click call the function and assign humanChoice
+/*
+function playGame() {
+    for (let i = 0; i < 5; i++) {
+        let humanChoice = prompt("Ready to play? Rock... paper... scissors!");
+        let computerChoice = getComputerChoice();
+        console.log(`Meatbag picks ${humanChoice.toLowerCase()} and The Machine picks ${computerChoice}.`);
+        playRound(humanChoice, computerChoice);
+    } 
+}
+*/
 
 
 /*
