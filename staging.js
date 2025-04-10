@@ -9,7 +9,8 @@ let humanScore = 0;
 let computerScore = 0;
 
 const output = document.querySelector("#output");
-const createParagraph = document.createElement("p");
+const choices = document.createElement("p");
+const outcome = document.createElement("p");
 
 /*
 function playRound(humanChoice, computerChoice) {
