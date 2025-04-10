@@ -9,12 +9,9 @@ let humanScore = 0;
 let computerScore = 0;
 
 const output = document.querySelector("#output");
+const createParagraph = document.createElement("p");
 
 function playRound(humanChoice, computerChoice) {
-    if (humanChoice === null) {
-        console.log("Game canceled. No choice made.");
-        return; // Exit early
-    };
     if (humanChoice === computerChoice) {
         console.log(`It's a draw! The score is still ${humanScore} for the human and ${computerScore} for the computer!`);
     } else if (humanChoice === "rock" && computerChoice === "scissors") {
