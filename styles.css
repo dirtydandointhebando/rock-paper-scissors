@@ -58,6 +58,9 @@ button:active {
 
 #output {
     background-color: #e9e8e8;
+    min-width: 400px;
+    min-height: 350px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
-
-/* Note: make sure to add specific dimensions to the output div
