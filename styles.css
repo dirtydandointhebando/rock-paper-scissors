@@ -34,7 +34,9 @@ button {
 }
 
 #rps-picker {
-     background-color: white;
-     padding: 25px 40px;
-     border-radius: 20px;
+    background-color: white;
+    padding: 25px 40px;
+    border-radius: 20px;
+    border-right: solid 4px #9BBBF2;
+    border-bottom: solid 4px #9BBBF2;
 }
