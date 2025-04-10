@@ -11,6 +11,7 @@ let computerScore = 0;
 const output = document.querySelector("#output");
 const createParagraph = document.createElement("p");
 
+/*
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
         console.log(`It's a draw! The score is still ${humanScore} for the human and ${computerScore} for the computer!`);
@@ -40,7 +41,7 @@ function playRound(humanChoice, computerChoice) {
         console.log(`Human score is now ${humanScore}. The computer's score is ${computerScore}.`);
     }
 }
-
+*/
 
 
 /*
@@ -64,3 +65,33 @@ function playGame() {
 
 playGame();
 */
+
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        console.log(`It's a draw! The score is still ${humanScore} for the human and ${computerScore} for the computer!`);
+    } else if (humanChoice === "rock" && computerChoice === "scissors") {
+        console.log("Rock beats scissors! Meatbag wins!");
+        humanScore++;
+        console.log(`Human score is now ${humanScore}. The computer's score is ${computerScore}.`);
+    } else if (humanChoice === "rock" && computerChoice === "paper") {
+        console.log("Paper beats rock. The machine wins!");
+        computerScore++
+        console.log(`Human score is now ${humanScore}. The computer's score is ${computerScore}.`);
+    } else if (humanChoice === "paper" && computerChoice === "rock") {
+        console.log("Paper beats rock! Meatbag wins!");
+        humanScore++;
+        console.log(`Human score is now ${humanScore}. The computer's score is ${computerScore}.`);
+    } else if (humanChoice === "paper" && computerChoice === "scissors") {
+        console.log("Scissors beats paper! Machine wins!");
+        computerScore++;
+        console.log(`Human score is now ${humanScore}. The computer's score is ${computerScore}.`);
+    } else if (humanChoice === "scissors" && computerChoice === "paper") {
+        console.log("Scissors beats paper! Meatbag wins! What a play!");
+        humanScore++;
+        console.log(`Human score is now ${humanScore}. The computer's score is ${computerScore}.`);
+    } else if (humanChoice === "scissors" && computerChoice === "rock") {
+        console.log("Rock beats scissors! Meatbag loses.");
+        computerScore++;
+        console.log(`Human score is now ${humanScore}. The computer's score is ${computerScore}.`);
+    }
+}
