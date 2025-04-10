@@ -31,17 +31,27 @@ button {
     width: 100px;
     margin-top: 15px;
     margin-bottom: 15px;
-    border-radius: 20px;
+    border-radius: 30px;
+    transition: font-weight border 0.3s ease-in-out;
+
 }
 
 button:hover {
-    box-shadow: 0px 10px 25px rgba(37, 139, 229, 0.35);
+    border-width: 2.5px;
+    font-weight: 550;
+    background-color: rgb(46, 140, 255, 0.1);
   }
+
+button:active {
+    border-width: 3px;
+    font-weight: 575;
+    background-color: rgb(46, 140, 255, 0.1);
+}
 
 #rps-picker {
     background-color: white;
     padding: 25px 40px;
-    border-radius: 20px;
+    border-radius: 30px;
     border-right: solid 4px #9BBBF2;
     border-bottom: solid 4px #9BBBF2;
 }
