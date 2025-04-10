@@ -8,6 +8,8 @@ function getComputerChoice() {
 let humanScore = 0;
 let computerScore = 0;
 
+const output = document.querySelector("#output");
+
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === null) {
         console.log("Game canceled. No choice made.");
