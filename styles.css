@@ -6,8 +6,13 @@
 body {
     display: flex;
     justify-content: center;
-    margin: 40px;
+    padding: 40px;
     text-align: center;
+    flex: 1;
+    height: 100vh; /* Ensure it covers the full viewport height */
+  background-image: linear-gradient(#2E8CFF, rgba(173, 201, 241, 0.51));
+  background-repeat: no-repeat;
+  background-size: cover; /* Makes sure it stretches to fill the screen */
 }
 
 p {
@@ -26,4 +31,10 @@ button {
     width: 100px;
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+#rps-picker {
+     background-color: white;
+     padding: 25px 40px;
+     border-radius: 20px;
 }
