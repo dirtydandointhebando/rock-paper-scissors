@@ -60,18 +60,21 @@ function playRound(humanChoice, computerChoice) {
 const rockButton = document.querySelector("#rockButton");
 rockButton.addEventListener("click", () => {
   let humanChoice = "rock";
+  let computerChoice = getComputerChoice();
   playRound(humanChoice, computerChoice);
 });
 
 const paperButton = document.querySelector("#paperButton");
 paperButton.addEventListener("click", () => {
   let humanChoice = "paper";
+  let computerChoice = getComputerChoice();
   playRound(humanChoice, computerChoice);
 });
 
 const scissorsButton = document.querySelector("#scissorsButton");
 scissorsButton.addEventListener("click", () => {
   let humanChoice = "scissors";
+  let computerChoice = getComputerChoice();
   playRound(humanChoice, computerChoice);
 });
 
