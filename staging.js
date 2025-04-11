@@ -100,6 +100,7 @@ function playRound(humanChoice, computerChoice) {
             output.appendChild(winner);
             gameOver = true;
             launchConfetti();
+            output.style.backgroundColor = "#c5f9bf";
           }
         if (computerScore === 5) {
             winner.textContent = "That's five points for the machine! Man's days are numbered! 🤖🤖🤖";
