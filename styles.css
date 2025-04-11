@@ -76,7 +76,7 @@ button:active {
     border-color: black;
     border-width: 1px;
     background-color: rgb(249, 249, 249);
-    min-width: 400px;
+    min-width: 200px;
     min-height: 250px;
     margin-top: 20px;
     margin-bottom: 10px;
