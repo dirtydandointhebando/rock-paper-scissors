@@ -56,6 +56,21 @@ function playRound(humanChoice, computerChoice) {
         outcome.textContent = `Human score is now ${humanScore}. The computer's score is ${computerScore}.`;
         output.appendChild(outcome);
     }
+    const declareWinner = () => {
+        if (humanScore === 5) {
+            winner.textContent = "That's five points for the human! One small win for man, one giant win for mankind!";
+            output.appendChild(winner);
+            humanScore = 0;
+            computerScore = 0;
+          }
+        if (computerScore === 5) {
+            winner.textContent = "That's five points for the machine! Man's days are numbered!";
+            output.appendChild(winner);
+            humanScore = 0;
+            computerScore = 0;
+          }
+    }
+    declareWinner();
 }
 
 const rockButton = document.querySelector("#rockButton");
@@ -79,16 +94,3 @@ scissorsButton.addEventListener("click", () => {
   playRound(humanChoice, computerChoice);
 });
 
-
-if (humanScore === 5 && computerScore > humanScore) {
-    winner.textContent = "That's five points for the human! One small win for man, one giant win for mankind!";
-    output.appendChild(winner);
-    humanScore = 0;
-    computerScore = 0;
-  }
-if (computerScore === 5 && computerScore < humanScore) {
-    winner.textContent = "That's five points for the machine! Man's days are numbered!";
-    output.appendChild(winner);
-    humanScore = 0;
-    computerScore = 0;
-  }
