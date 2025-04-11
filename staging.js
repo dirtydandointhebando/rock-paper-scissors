@@ -66,12 +66,12 @@ function playRound(humanChoice, computerChoice) {
     }
     const declareWinner = () => {
         if (humanScore === 5) {
-            winner.textContent = "That's five points for the human! One small win for man, one giant win for mankind!";
+            winner.textContent = "That's five points for the human! One small win for man, one giant win for mankind! 🎉🎉🎉";
             output.appendChild(winner);
             gameOver = true;
           }
         if (computerScore === 5) {
-            winner.textContent = "That's five points for the machine! Man's days are numbered!";
+            winner.textContent = "That's five points for the machine! Man's days are numbered! 🤖🤖🤖";
             output.appendChild(winner);
             gameOver = true;
           }
