@@ -16,6 +16,35 @@ function resetGame() {
     gameOver = false;
 }
 
+function launchConfetti() {
+    const confettiCanvas = document.createElement("canvas");
+    confettiCanvas.style.position = "absolute";
+    confettiCanvas.style.top = "0";
+    confettiCanvas.style.left = "0";
+    confettiCanvas.style.width = "100%";
+    confettiCanvas.style.height = "100%";
+    confettiCanvas.style.pointerEvents = "none";
+    confettiCanvas.style.zIndex = "1";
+
+    output.style.position = "relative";
+    output.appendChild(confettiCanvas);
+
+    const myConfetti = confetti.create(confettiCanvas, {
+        resize: true,
+        useWorker: true,
+    });
+
+    myConfetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.3 },
+    });
+
+    setTimeout(() => {
+        output.removeChild(confettiCanvas);
+    }, 30000);
+}
+
 const output = document.querySelector("#output");
 const choices = document.createElement("p");
 const outcome = document.createElement("p");
@@ -69,11 +98,13 @@ function playRound(humanChoice, computerChoice) {
             winner.textContent = "That's five points for the human! One small win for man, one giant win for mankind! 🎉🎉🎉";
             output.appendChild(winner);
             gameOver = true;
+            launchConfetti();
           }
         if (computerScore === 5) {
             winner.textContent = "That's five points for the machine! Man's days are numbered! 🤖🤖🤖";
             output.appendChild(winner);
             gameOver = true;
+            output.style.backgroundColor = "#ffe5e5";
           }
     }
     declareWinner();
