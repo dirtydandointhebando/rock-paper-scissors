@@ -14,6 +14,7 @@ function resetGame() {
     computerScore = 0;
     output.innerHTML = "";
     gameOver = false;
+    output.style.backgroundColor = "#f9f9f9";
 }
 
 function launchConfetti() {
