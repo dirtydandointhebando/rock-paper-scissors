@@ -56,7 +56,7 @@ button:active {
 
 #container {
     background-color: white;
-    padding: 25px 40px;
+    padding: 30px 40px;
     border-radius: 30px;
     border-right: solid 4px #9BBBF2;
     border-bottom: solid 4px #9BBBF2;
@@ -87,4 +87,5 @@ button:active {
 h2 {
     margin-top: 20px;
     margin-bottom: 10px;
+    font-size: 25px;
 }
