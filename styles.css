@@ -19,6 +19,9 @@ body {
 p {
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 #rps-buttons {
@@ -30,12 +33,13 @@ p {
 
 button {
     height: 40px;
-    width: 100px;
+    width: 110px;
     margin-top: 15px;
     margin-bottom: 15px;
     border-radius: 30px;
     transition: font-weight border 0.3s ease-in-out;
     background-color: #e9e8e8;
+    font-size: 18px;
 }
 
 button:hover {
