@@ -61,7 +61,10 @@ button:active {
 }
 
 #output {
-    background-color: #e9e8e8;
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    background-color: rgb(249, 249, 249);
     min-width: 400px;
     min-height: 350px;
     margin-top: 20px;
