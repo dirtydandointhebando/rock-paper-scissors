@@ -7,6 +7,14 @@ function getComputerChoice() {
 
 let humanScore = 0;
 let computerScore = 0;
+gameOver = false;
+
+function resetGame() {
+    humanScore = 0;
+    computerScore = 0;
+    output.innerHTML = "";
+    gameOver = false;
+}
 
 const output = document.querySelector("#output");
 const choices = document.createElement("p");
@@ -60,14 +68,12 @@ function playRound(humanChoice, computerChoice) {
         if (humanScore === 5) {
             winner.textContent = "That's five points for the human! One small win for man, one giant win for mankind!";
             output.appendChild(winner);
-            humanScore = 0;
-            computerScore = 0;
+            gameOver = true;
           }
         if (computerScore === 5) {
             winner.textContent = "That's five points for the machine! Man's days are numbered!";
             output.appendChild(winner);
-            humanScore = 0;
-            computerScore = 0;
+            gameOver = true;
           }
     }
     declareWinner();
@@ -75,6 +81,7 @@ function playRound(humanChoice, computerChoice) {
 
 const rockButton = document.querySelector("#rockButton");
 rockButton.addEventListener("click", () => {
+  if (gameOver) resetGame();
   let humanChoice = "rock";
   let computerChoice = getComputerChoice();
   playRound(humanChoice, computerChoice);
@@ -82,6 +89,7 @@ rockButton.addEventListener("click", () => {
 
 const paperButton = document.querySelector("#paperButton");
 paperButton.addEventListener("click", () => {
+  if (gameOver) resetGame();
   let humanChoice = "paper";
   let computerChoice = getComputerChoice();
   playRound(humanChoice, computerChoice);
@@ -89,6 +97,7 @@ paperButton.addEventListener("click", () => {
 
 const scissorsButton = document.querySelector("#scissorsButton");
 scissorsButton.addEventListener("click", () => {
+  if (gameOver) resetGame();
   let humanChoice = "scissors";
   let computerChoice = getComputerChoice();
   playRound(humanChoice, computerChoice);
