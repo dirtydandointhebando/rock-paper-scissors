@@ -11,6 +11,7 @@ let computerScore = 0;
 const output = document.querySelector("#output");
 const choices = document.createElement("p");
 const outcome = document.createElement("p");
+const winner = document.createElement("p");
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
@@ -77,3 +78,17 @@ scissorsButton.addEventListener("click", () => {
   let computerChoice = getComputerChoice();
   playRound(humanChoice, computerChoice);
 });
+
+
+if (humanScore === 5 && computerScore > humanScore) {
+    winner.textContent = "That's five points for the human! One small win for man, one giant win for mankind!";
+    output.appendChild(winner);
+    humanScore = 0;
+    computerScore = 0;
+  }
+if (computerScore === 5 && computerScore < humanScore) {
+    winner.textContent = "That's five points for the machine! Man's days are numbered!";
+    output.appendChild(winner);
+    humanScore = 0;
+    computerScore = 0;
+  }
