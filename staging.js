@@ -38,7 +38,7 @@ function launchConfetti() {
     myConfetti({
         particleCount: 150,
         spread: 70,
-        origin: { y: 0.3 },
+        origin: { y: 0.5 },
     });
 
     setTimeout(() => {
